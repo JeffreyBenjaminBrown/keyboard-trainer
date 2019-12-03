@@ -1,7 +1,7 @@
 #!/bin/bash
 
-t="temp-weird-character-string"
-t2="temp-weird-character-string-no-newlines"
+t=$(mktemp)
+t2=$(mktemp)
 
 shuf weird-characters > $t
 tr -d "\n\r" < $t > $t2
